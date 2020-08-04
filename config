@@ -1,0 +1,4 @@
+IMG_NAME="FennelRoot"
+USE_QEMU="1"
+TARGET_HOSTNAME="fennelroot"
+FIRST_USER_NAME="fennel"

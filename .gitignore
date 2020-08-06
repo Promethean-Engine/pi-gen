@@ -1,4 +1,5 @@
 deploy/*
+.vagrant/
 work/*
 postrun.sh
 SKIP

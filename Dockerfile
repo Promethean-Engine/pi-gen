@@ -2,7 +2,7 @@ FROM debian:buster
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -y update && \
+RUN sudo modprobe binfmt_misc && apt-get -y update && \
     apt-get -y install --no-install-recommends \
         git vim parted \
         quilt coreutils qemu-user-static debootstrap zerofree zip dosfstools \

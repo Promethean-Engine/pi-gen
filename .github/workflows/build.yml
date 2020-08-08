@@ -18,4 +18,10 @@ jobs:
 
       - name: Begin build.
         run: sudo ./build.sh
+
+      - name: Upload artifact.
+        uses: actions/upload-artifact@v2
+        with:
+          name: YggdrasilOS.zip
+          path: deploy/*-YggdrasilOS.zip
         

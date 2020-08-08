@@ -1,0 +1,7 @@
+[14:33:34] Begin /home/vagrant/yggdrasil
+[14:33:34] Begin /home/vagrant/yggdrasil/stage0
+[14:33:34] Begin /home/vagrant/yggdrasil/stage0/prerun.sh
+[14:33:34] End /home/vagrant/yggdrasil/stage0/prerun.sh
+[14:33:34] Begin /home/vagrant/yggdrasil/stage0/00-configure-apt
+[14:33:34] Begin /home/vagrant/yggdrasil/stage0/00-configure-apt/00-run.sh
+install: target '/home/vagrant/yggdrasil/work/2020-08-07-YggdrasilOS/stage0/rootfs/etc/apt/' is not a directory: No such file or directory

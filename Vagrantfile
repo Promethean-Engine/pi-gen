@@ -11,8 +11,12 @@ Vagrant.configure("2") do |config|
   end
   
   config.vm.provision "shell", inline: <<-SHELL
+    export DEBIAN_FRONTEND=noninteractive
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    apt-key fingerprint 0EBFCD88
+    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     apt-get update
-    apt-get upgrade -y
-    apt-get install -y coreutils quilt parted qemu-user-static debootstrap zerofree zip dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl bc docker-ce docker-ce-cli containerd.io apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+    apt-get upgrade -q=2 -y
+    apt-get install -q=2 -y coreutils quilt parted qemu-user-static debootstrap zerofree zip dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl bc docker-ce docker-ce-cli containerd.io apt-transport-https ca-certificates curl gnupg-agent software-properties-common
   SHELL
 end

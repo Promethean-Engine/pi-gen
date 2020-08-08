@@ -1,12 +1,14 @@
-name: 'Build YggdrasilOS'
-description: 'Runs the build script in a Docker container and makes the result available as a download.'
-
 on:
   push:
     branches:
       - "master"
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build script.
+    steps:
+      - name: Begin build.
+        id: build
+        uses: pi-gen/docker-action@v1
+        
